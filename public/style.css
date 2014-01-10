@@ -1,0 +1,13 @@
+body 
+{
+ background: #cccccc;
+ color: #3333FF;
+} 
+
+p:first-line { margin-left: 25px } 
+
+div:first-letter 
+{
+ font-size: x-large; 
+} 
+

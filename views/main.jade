@@ -1,0 +1,47 @@
+extends main_layout
+
+block content
+    h1 SearchApp Demo Page
+    hr
+    h2 1) Access Restful API info at 
+    a(href='/Search/api') /Search/api
+    hr
+    h2 2) Access full Event collection via GET at
+    a(href='/Search/api/Event') /Search/api/Event
+    hr
+    h2 3) Query Event collection via GET at
+    a(href='/Search/api/Event?tags=Gener') /Search/api/Event?tags=Gener
+    hr
+    h2 4) Add Event to Event collection via PUT at /Search/api/Event
+    div
+        form( method="put")
+            div
+                div
+                    span.label Event:
+                    textarea(height=3, width=80, name="Event", id="Event")
+                div
+                    input(type="submit", value="Go", action="/Search/api/Event")
+    hr
+    h2 5) Update Event via Post at /Search/api/Event/[id]  (Note: [id] hardcoded for XXXXXXXX)
+    div
+        form( method="post")
+            div
+                div
+                    span.label Event:
+                    textarea(height="3", width="80", name="Event", id="Event")
+                div
+                    input(type="submit", value="Save", action="/Search/api/Event")
+
+    hr
+    h2 6) Delete Event via DELETE at /Search/api/Event/[id]  (Note: [id] hardcoded for XXXXXXXX)
+    div
+        form( method="delete")
+            div
+                div
+                    span.label Title :
+                    input(type="text", name="title", id="editEmployeeTitle")
+                div
+                    span.label Name :
+                    input(type="text", name="name", id="editEmployeeName")
+                div
+                    input(type="submit", value="Save")
